@@ -1,0 +1,63 @@
+\documentclass[../main.tex]{subfiles} % HUSK at slette denne linje når man er done, ellers er doc grimt
+
+\begin{document}
+
+\section{Section}
+
+
+
+\lipsum[2-2] \cite{china_too_many}. 
+
+\subsection{Subsection}
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{figures/tex.png}
+    \caption{Tex Talk}
+    \label{fig:Tex}
+\end{figure}
+
+%\ref{fig:Tex} Brug denne til at referere til figurer!
+
+\lipsum[2-2]
+
+In \autoref{tab:table1}
+
+\newpage
+\begin{table}[H]
+    \centering
+    \caption{That is a table.}
+    \begin{tabular}{|c|c|c|}
+    \centering
+    \textbf{Lorem} & \textbf{Ipsum} & \textbf{Lorem [\$]} \\ \hline \hline
+1   & lipsum    & lorem     \\ \hline   
+2   & lipsum    & lorem   \\ \hline
+3   & lipsum    & lorem  
+    \end{tabular}
+    \label{tab:table1}
+\end{table}
+
+{\Large Mwuahaha} % \Large ændrer fontsize, 
+
+\begin{itemize}
+    \item Item 1 
+    \item Item 2 
+    
+\end{itemize}
+
+\newpage
+
+{\large Haha}
+
+\begin{enumerate}
+    \item Punkt 1
+    \item Punkt 2
+\end{enumerate}
+
+
+
+\lipsum[8]
+
+
+\end{document}
