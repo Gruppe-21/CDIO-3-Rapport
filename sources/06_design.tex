@@ -6,13 +6,13 @@
 
 %Indledning af design-afsnittet
 \begin{flushleft} 
-Intro tekst
+\TODO Intro tekst
 \end{flushleft}
 
 
 %Indledning til GRASP-principper
 \subsection{GRASP (!Indsat kopi fra CDIO-2!)}
-\TODO[Må vi kopiere denne del fra CDIO-2?]
+\TODO[Må vi kopiere denne del fra CDIO-2? Ellers skal dette omskrives]
 \begin{flushleft}
 Vi vil benytte GRASP principperne til at designe vores diagrammer, således at software-klasserne har et veldefineret og afgrænset ansvar som understøtter reusability. \newline
 \newline
@@ -29,7 +29,7 @@ De følgende GRASP principper forklares og argumenteres for under designklassedi
 
 %Designklassediagram
 \subsection{Designklassediagram (!Indsat kopi fra CDIO-2!)}
-\TODO[Må vi kopiere denne del fra CDIO-2?]
+\TODO[Må vi kopiere denne del fra CDIO-2? Ellers skal dette omskrives]
 \begin{flushleft}
 Et designklassediagram laves på baggrund af GRASP-principperne samt tidligere analytiske arbejde med særligt udgangspunkt i  vores domænemodel (Figur \ref{fig:domain}), som indeholder concepter af klasser. I designklassediagrammet arbejder vi med software-klasser, som skal implementeres i systemet. Her har software-klasserne mere konkrete beskrivelser end domænemodellen. Derfor er der bl.a. beskrevet attributter, tilhørende metoder og relationer mellem klasserne. Designklassediagrammet arbejdes dermed også videre på i implementationsfasen, da der vil opstå ændringer undervejs. Understående diagram er vores endelige dokumenterede designklassediagram for systemet:
 \end{flushleft}
@@ -37,40 +37,47 @@ Et designklassediagram laves på baggrund af GRASP-principperne samt tidligere a
 %Designklassediagram
 \begin{figure}[H]
     \centering
-    \rotatebox{270}{\includegraphics[width=0.92\textheight]{figures/designklassediagram.png}}
-    \caption{Designklassediagram}
+    \rotatebox{270}{\includegraphics[width=0.8\textheight]{figures/designklassediagram.png}}
+    \caption{Designklassediagram\newline \TODO[Evt chanceCard som abstract, som med Square?] }
     
     \label{fig:designclass}
 \end{figure}
 
+\newpage 
 
 % GRASP-principper i designklassediagram
 \subsubsection{GRASP principper for designklassediagram}
+\TODO (Kan ændres i forhold til klassediagrammet)
 \begin{flushleft}
 \begin{itemize}
     \item Creator: 
     \begin{itemize}
-        \item  
-        \item  
+        \item  \textit{Board} er ansvarlig for at indeholde objekter af \textit{Square} og aggregerer \textit{ChanceCard} objekter
+        \item  \textit{Player} har til ansvar at benytte objekter af \textit{BankBalance} og kan indeholde \textit{PropertySquare} objekter
+        \item \textit{Square}s ansvarsområde omhandler indholdet af objekter fra \textit{PropertySquare}, \textit{StartSquare}, \textit{PrisonSquare}, \textit{FreeParkingSquare}, \textit{GoToPrisonSquare} og \textit{ChanceSquare}
+        \item \textit{Game} har samme mængde ansvar som i CDIO2
     \end{itemize}
-    \item Information Expert:
+    \item Information Expert: (Fra Game til Square er det næsten det samme som i CDIO2)
     \begin{itemize}
-        \item  
-        \item 
+        \item Klassen \textit{Game} er en information expert, der står for at håndtere spiller og at spillerne rykkes rundt på spillepladen
+        \item \textit{BankBalance}-klassen har informationerne til at ændre spillerens pengebeholdning
+        \item \textit{Board}-klassen er en information expert, som håndterer felter, der er givet ved navn og beskrivelse
+        \item \textit{Square}-klassen har infomationer til at skabe et felt med navn og beskrivelse
+        \item \textit{PropertySquare} indeholder informationer til at generere et felt bestående af pris, farve og ejerskab
     \end{itemize}
     \item Low Coupling:
     \begin{itemize}
-        \item
-        \item
+        \item Der er hovedsageligt få koblinger mellem klasserne, hvor den største mængde koblinger er 7 på klassen \textit{Square}
+        \item Da \textit{Square} har mange koblinger, støtter den ikke low coupling, men klassen har stadig high cohesion
     \end{itemize}
     \item High Cohesion:
     \begin{itemize}
-        \item
-        \item
+        \item Generelt er der tale om high cohesion mellem klasserne, da de har en passende mængde ansvar for kodegenerering som opfyldes ved samarbejde med andre klasser
+        \item !!(Hvis der opstår problemer med implementering, kan det skyldes low cohesion)!! Notice
     \end{itemize}
-    \item Controller: 
+    \item Controller: (Kopieret fra CDIO2)
     \begin{itemize}
-        \item 
+        \item Klassen \textit{Game} vælges som facade controller, som står for inputs til systemet. Det skyldes at \textit{Game} ikke vurderes at have så stort ansvar, at den bliver incohesive
     \end{itemize}
 \end{itemize}
 \end{flushleft}
@@ -79,22 +86,23 @@ Et designklassediagram laves på baggrund af GRASP-principperne samt tidligere a
 % Sekvensdiagram
 \subsection{Sekvensdiagram }
 \begin{flushleft}
-Intro sekvensdiagram
+\TODO Intro sekvensdiagram
 \end{flushleft}
 
-%Sekvensdiagram for Game og Die?
-\subsubsection{Indsæt klasser}
-\begin{figure}[H]
-    \centering
-   {\includegraphics[width=0.5\textheight]{figures/}}
-    %\includegraphics[width=0.6\linewidth]{figures/DesignClassDiagram.jpg}
-    \caption{Sekvensdiagram over ...}
-    \label{fig:sekvensdia1}
-\end{figure}
+%Sekvensdiagram for ....?
+\subsubsection{...}
+%\begin{figure}[H]
+%    \centering
+%   {\includegraphics[width=0.5\textheight]{figures/}}
+%    %\includegraphics[width=0.6\linewidth]{figures/DesignClassDiagram.jpg}
+%    \caption{Sekvensdiagram over ...}
+%    \label{fig:sekvensdia1}
+%\end{figure}
 
 
 %Pakkediagram? (Måske)
-\subsection{Pakkediagram (Måske) }
+\subsection{Pakkediagram (Måske?) }
+\TODO[Afhænger måske af om det var rigtigt sidst, for så er det meget nemt at lave.]
 
 
 \end{document}
