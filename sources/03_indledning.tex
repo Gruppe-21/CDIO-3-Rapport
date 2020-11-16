@@ -1,13 +1,53 @@
 \documentclass[../main.tex]{subfiles}
 
 \begin{document}
+\begin{flushleft}
 
 \section{Indledning}
+Programmørerne i IOOuteractive er blevet bedt om at lave et Monopoly Junior spil. Spillet er en nemmere udgave af Monopoly som er egnet til børn 5 år og ældre. Kunden har stillet specifikke krav til hvordan spillet skal foregå og vi har fået udleveret en GUI til hvordan udseendet på spillet skal være.\\
+
+\subsection{Spillet}
+Spillet består af minimum 2 eller op til 4 spillere, som hver har én spillebrik af henholdvis figurerne: Hund, Kat, Skib og Bil. Spillerne slår med 1 terning og rykker rundt på spillepladen. Spillerne skal så købe ejendomme på spillebrættet og tjene \M penge. Dette forsætter så indtil at der er én spiller der går fallit. Derefter er det så spilleren der har den største pengebeholdning der vinder spillet.\\
+
+\subsection{Spillets felter}
+Spillet består af forskellige felter der har forskellige funktioner.\\
+
+\subsubsection*{Startfelt:}
+Spillebrættet har et startfelt hvor alle spillere starter fra når spillet startes. Efterfølgende vil startfeltets funktion være at hver gang en spiller lander eller passerer feltet modtager spilleren 2 \M.
+
+\subsubsection*{Fængselsfelter:}
+Der er 2 felter i spillet der har med fængslet at gøre. \textit{Gå-I-Fængsel}-feltet og \textit{På-Besøg-I-Fængslet}-feltet. Hvis man lander på \textit{Gå-I-Fængsel}-feltet skal spilleren på feltet sættes i fængsel. Selve fængslet ligger på feltet \textit{På-Besøg-I-Fængslet}-feltet, så spilleren flyttes hertil og hvor der derudover er tilhørende regler for hvordan man kommer ud igen. Men hvis en spiller lander på \textit{På-Besøg-I-Fængslet}-feltet sker der ingenting.\\
+
+\subsubsection*{Chance-felter}
+Der er 4 chancefelter i spillet og hvis en spiller lander på en af disse, trækkes der er chancekort fra chancekort bunken og der udføres det der står på kortet.
+
+\subsubsection*{Gratis Parkering}
+Hvis en spiller lander på Gratis Parkeringsfeltet så sker der ikke noget og spilleres tur afsluttes.
+
+\subsubsection*{Ejendomsfelter:}
+Ejendomsfelter kan købes af spillerne hvis de lander på det og det ikke har en ejer i forvejen. Hvis en spiller lander på et ejet felt så skal de andre spillere betale husleje til ejeren af feltet. Hvert felt har en farve og hvis en spiller ejer alle ejendomme i samme farve så skal de andre spillere der lander på feltet betale ejeren det dobbelte i husleje. Her ses en liste over alle ejendomsfelter samt deres farve:
+\begin{itemize}
+    \item Burgerbaren (Brun)
+    \item Pizzeriaet (Brun)
+    \item Slikbutikken (Lyseblå)
+    \item Iskiosken (Lyseblå)
+    \item Museet (Lyserød)
+    \item Biblioteket (Lyserød)
+    \item Skaterparken (Orange)
+    \item Swimmingpoolen (Orange)
+    \item Spillehallen (Rød)
+    \item Biografen (Rød)
+    \item Legetøjsbutikken (Gul)
+    \item Dyrehandlen  (Gul)
+    \item Bowlinghallen (Grøn)
+    \item Zoo (Grøn)
+    \item Vandlandet (Mørkeblå)
+    \item Strandpromenaden (Mørkeblå)
+\end{itemize}
+
+\subsection{Udarbejdelse af projekt}
+Til udarbejdelse af vores projekt vil vi gøre brug af Unfied Process (UP) som vores udviklingsprocess. Her vil der tages udgangspunkt i at arbejde henover en 3-ugers periode, hvor projektet opdeles i mindre delelementer kaldet itterationer. Vha. af UP gør vi brug af Unfied Modelleing Language (UML), hvor der vil udarbejdes diverse artifaktor til at kunne udvikle og dokumentere vores softwareprojekt. Derudover vil der gøres brug af diverse JUnit-, sandsyndligheds- og brugertest til at kunne sikre os en høj brugervenlighed og funktionallitet for programmet. Til sidst vil der blive beskrevet hvordan projektet har forløbet sig både ift. planlægning men også strategi for versionssytring i Github. Derudover vil der vurderes om hvorvidt kravspecifikationen er afdækket på tilfredsstillende.
 
 
-
-
-
-
-
+\end{flushleft}
 \end{document}
