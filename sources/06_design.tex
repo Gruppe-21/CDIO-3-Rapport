@@ -5,13 +5,12 @@
 \section{Design}
 
 %Indledning af design-afsnittet
-\TODO Intro tekst
 I designfasen af projektet vil der tages udgangspunkt i de stillede designmæssige krav til at lave bræspillet. De krav der er sat. og som vil blive udarbejde. er til at vise vores bruge af GRASP principperne, lave et designklassediagram, lave et sekvensdiagram og (muligvis) lave et pakkediagram. 
 
 
 %Indledning til GRASP-principper
 \subsection{GRASP (!Indsat kopi fra CDIO-2!)}
-\TODO[Må vi kopiere denne del fra CDIO-2? Ellers skal dette omskrives]
+\TODO[\textit{Må vi kopiere denne del fra CDIO-2? Ellers skal dette omskrives}]
 
 Vi vil benytte GRASP principperne til at designe vores diagrammer, således at software-klasserne har et veldefineret og afgrænset ansvar som understøtter reusability. \newline
 
@@ -28,8 +27,8 @@ De følgende GRASP principper forklares og argumenteres for under designklassedi
 
 
 %Designklassediagram
-\subsection{Designklassediagram (!Indsat kopi fra CDIO-2!)}
-\TODO[Må vi kopiere denne del fra CDIO-2? Ellers skal dette omskrives]
+\subsection{Designklassediagram }
+\TODO[\textit{Må vi kopiere denne del fra CDIO-2? Ellers skal dette omskrives}]
 
 Et designklassediagram laves på baggrund af GRASP-principperne samt tidligere analytiske arbejde med særligt udgangspunkt i  vores domænemodel (Figur \ref{fig:domain}), som indeholder concepter af klasser. I designklassediagrammet arbejder vi med software-klasser, som skal implementeres i systemet. Her har software-klasserne mere konkrete beskrivelser end domænemodellen. Derfor er der bl.a. beskrevet attributter, tilhørende metoder og relationer mellem klasserne. Designklassediagrammet arbejdes dermed også videre på i implementationsfasen, da der vil opstå ændringer undervejs. Understående diagram er vores endelige dokumenterede designklassediagram for systemet:
 
@@ -81,7 +80,8 @@ Et designklassediagram laves på baggrund af GRASP-principperne samt tidligere a
     \end{itemize}
 \end{itemize}
 
-
+\subsubsection{Abstrakt, nedarvning og override}
+En vigtig pointe at have med fra vores design af softwareklasserne, er vi bl.a. gør brug af abstrakte klasser. Her ses det i design klassediagrammet, at både \textit{Square} og \textit{ChanceCard} fungerer som abstrakte klasser. Dette betyder at man ikke kan instantiere objekter af disse, men man i stedet kan gøre brug nedarvning. Nedarvning dækker over at man eksempelvis har en superklasse, \textit{Square}, med definerede attributer og metoder. Udfra superklassen kan man danne subklasser, fx \textit{StartSquare} eller \textit{PropertySquare}. Disse subklasser vil derved nedarve superklassens attributter og metoder. En vigtig pointe at have med ift. nedarvning er, at subklasserne alle har en metode ved samme navn, eksempelvis \textit{handleLandOn}, som nedarves fra super klassen \textit{Square}. Her vil hver subklasse have deres egen effekt af denne metode. Dette begreb kaldes for override, inden for polymorfi i programmering, da subklasserne overskriver superklassens metode. Fordelen ved at gøre brug af abstrakte klasser, nedarvning og override er, at det bliver mere læseligt og mindre komplekst at implementere senere hen.
 
 % Sekvensdiagram
 \subsection{Sekvensdiagram }
