@@ -1,11 +1,24 @@
 \documentclass[../../main.tex]{subfiles}
 
 \begin{document}
+\begin{flushleft}
+
+
 \subsection{Board}
 
-For at gøre det nemmere at oversætte spillet til andre sprog, vurderes det fra gruppens side, at den bedste løsning ville være at samle alle tekst strenge, som "SquareName" og "EventText" i en xml fil, for at gøre det nemmere at oversætte gruppens monopoly junior spil til andre sprog. 
+For at gøre det nemmere at oversætte spillet til andre sprog, vurderes det fra gruppens side, at den bedste løsning ville være at samle alle tekst strenge, som f.eks. "SquareName" og "EventText" i en xml fil, for at gøre det nemmere at oversætte gruppens monopoly junior spil til andre sprog. 
 
-Selve squarene i spillet er gemt i en Array list, hvert element i denne list har et navn, samt attributter. 
+Selve squarene i spillet er gemt i et array, hvert element i dette array har et navn, samt tilhørende attributter. 
 Boardloader indlæser navne fra xml fil, addXMLSquareToArrayList, tilføjer attributter til den hver af felterne.
 
+I al sin enkelhed er boardet bare et objekt der er initialisret ved at læse boardet bare fra en XML fil.
+
+\subsection{BoardLoader}
+
+Boardloader indeholder metoder der fortolker og opretter ChanceCards og Squares objekter fra en XML fil. Hvilket gør det nemmere at fjerne, tilføje eller modificere felter på spillebrættet eller chancekortene, da ændringer af disse bare skal laves i en XML fil. Ændringer til Squares, skal laves i main\_board.xml, og ændringer til ChanceCard skal laves i "reference til ChanceCard.xml". 
+
+Hver square har som førnævnt sine attributter beskrevet i main\_board.xml. 
+
+"Indsæt billede af et property squre, og giv mere detaljeret beskrivelse".
+\end{flushleft}
 \end{document}

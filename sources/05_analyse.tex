@@ -9,7 +9,7 @@
 \begin{flushleft} 
 I analysefasen af projektet vil der tages  brug af de  funktionelle og ikke-funktionelle krav til brætspillet. Ud fra dette vil vi udarbejde et use case diagram, samt en tabeloversigt over use-cases med ID-numre, funktion og casual beskrivelse. 
 Der vil derudover også blive udarbejdet use case beskrivelser udfra use case tabellen, hvor der henholdsvis vil gøres brug af detaljeret(fully-dressed) format og hovedsageligt brief form.
- Til sidst vil der udarbejdet en domænemodel, som indeholder concepter af klasser og et systemsekvensdiagram da det er nødvendigt at få et dynamisk overblik over systemet for at kunne implementere koden for brætspillet.
+ Til sidst vil der udarbejdes en domænemodel, som indeholder concepter af klasser og et systemsekvensdiagram da det er nødvendigt at få et dynamisk overblik over systemet for at kunne implementere koden for brætspillet.
 \end{flushleft}
 
 
@@ -72,9 +72,9 @@ Brætspillet indeholder én primær aktør:
 \textbf{Level}                      & N/A      \\ \hline
 \textbf{Primary actor}              & Spiller  \\ \hline
 \textbf{Stakeholders and Interests} & N/A      \\ \hline
-\textbf{Preconditions}             & At spilleren har påbegyndt brætspillet, det spillerens tur og spiller skal have rykket til et ejendomsfelt \\ \hline 
-\textbf{Post condition}             & Spiller ejer enten  feltet, har betalt husleje eller gået fallit \\ \hline
-\textbf{Main Success Scenario}      & \begin{tabular}[c]{@{}l@{}}1. Spiller rykker til ejendomsfelt \\ 2. Spiller køber feltet og betaler banken \\ 3. Spiller placerer et \textit{solgt}-skilt \\4. Spiller ejer nu feltet 
+\textbf{Preconditions}             & At spilleren har påbegyndt brætspillet, det er spillerens tur og spiller skal have rykket til et ejendomsfelt \\ \hline 
+\textbf{Post condition}             & Spiller ejer enten  feltet, har betalt husleje eller er gået fallit \\ \hline
+\textbf{Main Success Scenario}      & \begin{tabular}[c]{@{}l@{}}1. Spiller rykker til ejendomsfelt \\ 2. Spiller køber feltet og betaler banken \\ 3. Spiller placerer et \textit{solgt}-skilt på feltet \\4. Spiller ejer nu feltet 
 \end{tabular} \\ \hline
 \textbf{Extensions (alternative flows)}  & \begin{tabular}[c]{@{}l@{}}
 a. Hvis ingen ejer feltet  \\ \hspace{5mm} 
@@ -123,7 +123,7 @@ b. Den spiller med højst samlet værdi vinder \\
 \end{tabular} \\ \hline
 \textbf{Special Requirements}             & N/A \\ \hline
 \textbf{Technology and Data Variations List}     & N/A \\ \hline
-\textbf{Frequency of Occurrence}                   & \begin{tabular}[c]{@{}l@{}}Der er lav frekvens, da use case kun forekom-\\mer én gang i gennemspillet.
+\textbf{Frequency of Occurrence}                   & \begin{tabular}[c]{@{}l@{}}Der er lav frekvens, da use case kun forekom-\\mer én gang igennem spillet.
 \end{tabular} \\ \hline
     \end{tabular}
     \caption{UC1 Spil Brætspil}
@@ -132,24 +132,7 @@ b. Den spiller med højst samlet værdi vinder \\
 
 
 \subsubsection{Brief use-case beskrivelse:\textit{}}
-%%%%%%%%%%%%%%
-%SKABELON! %%%
-%\begin{table}[H]
-%\begin{tabular}{|l|p{0.75\linewidth}|}
-%\hline
-%\textbf{Use Case}       & Skabelon Brief \\ \hline
-%\textbf{ID}                & X   \\ \hline
-%\textbf{Brief Description} & ...   \\ \hline
-%\textbf{Primary actors}    & ...   \\ \hline
-%\textbf{Secondary actors}  & ...   \\ \hline
-%\textbf{Preconditions}     & ...   \\ \hline
-%\textbf{Main flow}         & 1.   \\ \hline
-%\textbf{Post conditions}   & ...   \\ \hline
-%\textbf{Alternative flows} & 1.   \\ \hline
-%\end{tabular}
-%\caption{skabelon}
-%\label{tab:skabelon_brief}
-%\end{table}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %UC 01 - SPIL MONOPOLY %%%%%%%%%%%%%%%%%%
@@ -185,7 +168,7 @@ b. Den spiller med højst samlet værdi vinder \\
 \textbf{Brief Description} & En spiller kaster en terning og får givet en værdi i antal øjne på terningen                                                \\ \hline
 \textbf{Primary actors}    & Spiller          \\ \hline
 \textbf{Secondary actors}  & N/A              \\ \hline
-\textbf{Preconditions}     & At spilleren har påbegyndt brætspillet og det er spillers tur            \\ \hline
+\textbf{Preconditions}     & At spilleren har påbegyndt brætspillet og det er spillers tur          \\ \hline
 \textbf{Main flow}         & \begin{tabular}[c]{@{}l@{}}1. Når det er spillers tur kastes en terning \\ 2. Spiller kan aflæse antal øjne på terningen \\  
 \end{tabular}                                  \\ \hline
 \textbf{Post conditions}   & Spilleren rykkes det antal felter frem, som terningens værdi viser       \\ \hline
@@ -232,7 +215,7 @@ b. Den spiller med højst samlet værdi vinder \\
 \end{tabular}                                  \\ \hline
 \textbf{Post conditions}   & Spiller har modtaget 2 $\M$, hvis ikke spiller er i fængsel\\ \hline
 \textbf{Alternative flows} &
-\begin{tabular}[c]{@{}l@{}}1. Hvis spiller rykker til fængsel pga. \textit{Gå-I-Fængsel}-feltet og modtager\\ spiller  ikke 2 $\M$ 
+\begin{tabular}[c]{@{}l@{}}1. Hvis spiller rykker til fængsel pga. \textit{Gå-I-Fængsel}-feltet og\\ modtager spiller  ikke 2 $\M$ 
 \end{tabular} 
 \\ \hline
 \end{tabular}
@@ -252,14 +235,14 @@ b. Den spiller med højst samlet værdi vinder \\
 \textbf{Primary actors}    & Spiller\\ \hline
 \textbf{Secondary actors}  & N/A \\ \hline
 \textbf{Preconditions}     & At spilleren har påbegyndt sin tur og har landet på et \textit{chance}-felt  \\ \hline
-\textbf{Main flow}         & \begin{tabular}[c]{@{}l@{}}1. Spiller har landtt på et \textit{chance}-felt  \\ 2. Spiller tager det øverste kort i chancekortbunken \\3. Spiller udfører instruks på kortet\\4. Spiller lægger det brugte kort nederst i bunken.
+\textbf{Main flow}         & \begin{tabular}[c]{@{}l@{}}1. Spiller er landet på et \textit{chance}-felt  \\ 2. Spiller tager det øverste kort i chancekortbunken \\3. Spiller udfører instruks på kortet\\4. Spiller lægger det brugte kort nederst i bunken.
 \end{tabular}                                  \\ \hline
 \textbf{Post conditions}   & Spiller har trukket et chancekort, udført handling og lagt kort tilbage i bunken.      \\ \hline
 \textbf{Alternative flows} & 
 \begin{tabular}[c]{@{}l@{}} 1. Hvis spiller har modtaget et \textit{Du løslades uden omkostninger}-kort \\ \hspace{5mm} 
 1.1 Spiller gemmer kort til vedkommende er i fængsel\\
 2. Hvis spiller har givet et \textit{"Giv dette kort til.."}-kort til anden spiller\\\hspace{5mm} 
-2.1 Den pågældende spiller, som har modtaget kortet, \\\hspace{10mm}gemmer kortet til det er vedkommendes tur og udfører aktivitet\\
+2.1 Den pågældende spiller, som har modtaget kortet, \\\hspace{10mm}gemmer kortet til det er vedkommendes tur og udfører \\\hspace{10mm}aktiviten i deres tur\\
 \end{tabular}
 \\\hline
 \end{tabular}
@@ -284,10 +267,10 @@ b. Den spiller med højst samlet værdi vinder \\
      2. Spilleren har slået det antal øjne hvor spilleren lander på\\
      \hspace{5mm} \textit{Gå-I-Fængsel}-feltet \\
      3. Spilleren skal nu flyttes til \textit{I-Fængsel}-feltet\\
-     4. Spilleren skal nu ventet én runde\\
+     4. Spilleren skal nu vente én runde\\
      5. Spilleren betaler 1 $\M$ for at komme ud af fængslet
 \end{tabular}  \\ \hline
-\textbf{Post conditions}   &  Spilleren kommer ud fængslet igen \\ \hline
+\textbf{Post conditions}   &  Spilleren kommer ud af fængslet igen \\ \hline
 \textbf{Alternative flows} & \begin{tabular}[c]{@{}l@{}}
 1. Hvis spilleren har chancekortet \textit{Du løslades uden omkostninger} så\\ \hspace{5mm} må spilleren godt komme ud uden at skulle betale 1 $\M$ \\
 2. Hvis spilleren ikke har nok penge til at betale for at komme ud\\

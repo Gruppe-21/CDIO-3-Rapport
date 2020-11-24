@@ -3,23 +3,150 @@
 \begin{document}
 
 \section{Krav}
-\begin{flushleft}
-\TODO Indledende tekst + udfylde punkter
-\end{flushleft}
 
-{\Large Funktionelle krav}
+
+{\Large Regler}
 
 \begin{enumerate}
-   \item test
-   \item test1
-%\end{enumerate}
+   \item Spillet spilles af 2-4 spillere
+   \item Indhold
+   \begin{itemize}
+       \item 1 Spillebræt
+       \item 4 Brikker
+       \item 20 Chancekort
+       \item 48 "Solgt" skilte
+       \item 4 hvem er din brik? - figurkort
+       \item 1 terning
+   \end{itemize}
+   \item Hver spiller skal kunne vælge deres eget figurkort    
+   \item Solgt skiltene 12x pr. figurkort skal have samme billede som figurkortet
+   \item Spillet agerer selv som bank
+   \item Spillets Gang:
+   \begin{itemize}
+       \item Den yngste spiller starter
+       \item \M penge bliver i starten af spillet fordelt efter antal spillere:
+       \begin{itemize}
+           \item Ved 2 spillere: 20\M penge hver
+           \item Ved 3 spillere: 18\M penge hver
+           \item Ved 4 spillere: 16\M penge hver
+       \end{itemize}
+       \item En runde starter ved at kaste terningen og derefter rykker spillet ens figur det antal felter som øjnene viser videre med uret på brættet. \todo måske skulle der indsættes at turen derefter går til spilleren til venstre
+       \item Hver gang start passeres modtages der med det samme 2 \M penge
+       \item Landes der på et ledigt felt. Skal spilleren købe det. (beløb står på feltet)
+       \begin{itemize}
+           \item Pengene går til banken
+           \item Der placeres en af spillerens "Solgt" skilte
+       \end{itemize}
+       \item Landes der på et ejet felt (beløb står på feltet)
+       \begin{itemize}
+           \item Skal husleje betales 
+           \item Hvis du selv ejer grunden sker der ikke noget
+       \end{itemize}
+       \item Hvis en spiller ejer begge ejendomme i samme farve skal der betales dobbelt husleje
+       \item Spillets skal indeholde følgende felter \todo skal de specificeres at der er 4 chance felter her?
+       \begin{itemize}
+           \item Start
+           \item Chance
+           \item Gå i fængsel
+           \item På besøg i fængsel
+           \item Gratis Parkering
+       \end{itemize}
+       \item Spillets afslutning
+       \begin{itemize}
+           \item Simpel
+           \begin{itemize}
+               \item Hvis spilleren ikke har råd til at betale for husleje, eller betale afgift fra et chancekort, går spilleren fallit. Og så er spillet slut
+               \item De andre spillere tæller deres penge, og den, der har flest har vundet!
+               \item Uafgjort? Tæl, hvor meget dine ejendomme er værd, og læg det til dine penge.
+           \end{itemize}
+           \item Avanceret
+           \begin{itemize}
+               \item Hvis du ikke har penge nok til at betale husleje eller en afgift fra et chancekort, skal du betale med dine ejendomme
+               \item Hvis du skylder en anden spiller penge, får den spiller dine ejendomme. Hvis du skylder banken penge, bliver dine ejendomme sat til salg igen.
+               \item Hvis du stadig ikke kan betale, er du gået fallit, og spillet slutter. Alle tæller deres penge for at se hvem der har vundet. \todo måske tilføje hvad der sker hvis det er uafgjort her også
+           \end{itemize}
+       \end{itemize}
+   \end{itemize}
 
 \hfill
 
-{\Large Ikke-funktionelle krav}
+{\Large Analyse- og designdokumentation}
+   \item Kravliste
+   \item Use case diagram'
+   \item Eksempler på use case beskrivelser - vælg mindst én, der beksrives fully dressed
+   \item Domænemodel
+   \item Et eksempel på systemsekvensdiagram
+   \item Et eksempel på sekvensdiagram
+   \item Designklassediagram
+   
+   \hfill
+   
+{\Large Implementering}
+    \item Lav passende konstruktører
+    \item Lav passende get og set metoder
+    \item Lav passende toString metoder
+    \item Lav en klasse gameboard der kan indeholde alle felterne i et array
+    \item Tilføj en toString metode der udskriver alle felterne i arrayet
+    \item Lav det spil kunden har bedt om med de klasser I nu har
+    \item Benyt GUI'en. Gui' skal importeres fra Maven: Maven repository
+    \item Tekst strenge skal så vidt muligt importeres fra filer
+    
+    \hfill
 
-%\begin{enumerate}
-   \item test2
+{\Large Dokumentation}
+    \item Forklar hvad arv er
+    \item Forklar hvad abstract betyder
+    \item Fortæl hvad det hedder hvis alle fieldklasserne har en landOnField metode der gør noget forskelligt
+    \item Dokumentation for test med screenshots
+    \item Dokementation for overholdelse af GRASP
+    
+    \hfill
+
+{\Large Test}
+    \item Lav mindst tre testcases med tilhørende fremgangsmåde/testprocedurer og testrapporter
+    \item Lav mindst én Junit test til centrale metoder. Inkludér code coverage dokumentation
+    \item Lav mindst én brugertest. Husk at brugeren skal være en der ikke kan kode
+    
+    \hfill
+    
+{\Large Versionstyring}
+    \item Lav et lokal Git-repository som en del af IntelliJ-projektet. Alternativt kan afleveres et link til et repository på nettet eks. 
+    \item Rapporten skal indeholde en vejledning i hvordan man importerer Git-repository i IntelliJ.
+    
+    
+    \newpage
+    
+{\Large Konfigurationsstyring} \newline
+\todo Skal dette skrives om fra opgave form? \\
+Udviklingsplatformen er alt det software i bruger under udviklingen af jeres projekt. Produktionsplatformen er alt det software der skal bruges til at køre jeres færdige program. I dette projekt er de ens. I skal dokumentere platformens dele med versionsnummer så den kan genskabes til senere brug. Jeres platform består af operativsystem, java, og IntelliJ samt biblioteket matadorgui.jar der hentes fra Maven.
+I bedes definere hvordan I vil sikre jer, at I på et hvert tidspunkt vil kunne
+finde den sidste nyeste version af samtlige artefakter OG hvordan I vil
+sikre jer at dokumentationen altid er opdateret for jeres system
+– Hvor er filerne?
+– Hvordan finder vi den nyeste version?
+– Hvordan sikrer vi at vi ved om versionen er opdateret?
+– Hvordan finder vi versioner som passer sammen?
+Endvidere skal i beskrive hvordan man importerer jeres projekt i IntelliJ fra git, og hvordan man kører jeres program.
+Det er også et krav at I bruger Maven til at hente junit.
+
+\begin{itemize}
+    \item Dokumenter platformens dele med versionsnummer så de kan genskabes til senere brug
+    \item Definer hvordan der sikres at der på ethvert tidspunkt vil kunne finde den sidste nyeste version af samtlige artefakter.
+    \item Definer hvordan der sikres at dokumentation altid er opdateret for systemet
+    \item Beskrive hvor filerne er
+    \item Hvordan sikres at versionen er opdateret?
+    \item Hvordan findes versioner som passer sammen?
+    \item Beskriv hvordan projektet importeres i IntelliJ fra git.
+    \item Beksriv hvordan man kører programmet
+    \item Der skal benyttes Maven til at hente junit-
+\end{itemize}
+\subsection{Tilføjelser}
+
+\begin{itemize}
+    \item Der er vigtigt, at der er tydelig sammenhæng mellem beskrivelser og diagrammer. Det skal således være muligt at trace fra kravliste til analysedokumentation, designdokumentation og implementering. 
+\end{itemize}
+
+
 \end{enumerate}
 
 \hfill

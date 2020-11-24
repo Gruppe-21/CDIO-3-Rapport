@@ -2,6 +2,18 @@
 
 \begin{document}
 
+\subsection{Abstract}
 
+Såfremt der ønskes at laves et generelt koncept for en basisklasse, som nedarvede klasser derefter specaliserer yderlige. Benyttes en abstract klasse. Den abstract klasse vil så indeholde generelle attributter som nedarvede klasser så vil overkrive. Et generelt kendetegn ved en abstract klasse er at den ikke kan have nogen konstruktør. Da klassen så ikke vil være abstract. 
+
+F.eks. her i Monopoly Jr. projektet er der i square klassen defineret en abstract klasse Square (burde det være men er det sådan?), som andre typer af Squares nedarver fra. Der er ikke en konstruktør for square, men andre klasser, såsom Property Square kan nedarve fra den. 
+
+Det er ikke kun en klasse der kan være abstract, en metode kan også være abstract. Enhver klasse kan godt indeholde abstract metoder, som overskrives i nedarvede klasser. Hvis en klasse ikke instantierer nogle af sine abstract metoder er klassen derfor selv abstract. 
+
+Abstrakte klasser kan ikke være final.
+
+\subsection{Polymorfi}
+
+I CDIO projektet er der benyttet metoden LandOnField, som gør noget forskelligt alt efter hvilket felt der bliver landet på. Det kaldes polymorfi, hvor der er oprettet en abstract metode, som gør noget forskelligt alt efter hvilken klasse der kalder metoden.1
 
 \end{document}

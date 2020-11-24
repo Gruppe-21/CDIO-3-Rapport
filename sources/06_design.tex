@@ -1,21 +1,21 @@
 \documentclass[../main.tex]{subfiles}
 
 \begin{document}
-
+\begin{flushleft} 
 \section{Design}
 
 %Indledning af design-afsnittet
-\begin{flushleft} 
 \TODO Intro tekst
-\end{flushleft}
+I designfasen af projektet vil der tages udgangspunkt i de stillede designmæssige krav til at lave bræspillet. De krav der er sat. og som vil blive udarbejde. er til at vise vores bruge af GRASP principperne, lave et designklassediagram, lave et sekvensdiagram og (muligvis) lave et pakkediagram. 
 
 
 %Indledning til GRASP-principper
 \subsection{GRASP (!Indsat kopi fra CDIO-2!)}
 \TODO[Må vi kopiere denne del fra CDIO-2? Ellers skal dette omskrives]
-\begin{flushleft}
+
 Vi vil benytte GRASP principperne til at designe vores diagrammer, således at software-klasserne har et veldefineret og afgrænset ansvar som understøtter reusability. \newline
-\newline
+
+\vspace{5mm}
 De følgende GRASP principper forklares og argumenteres for under designklassediagrammet:
 \begin{itemize}
     \item Creator: Ansvar for objektskabelse
@@ -24,15 +24,15 @@ De følgende GRASP principper forklares og argumenteres for under designklassedi
     \item High Cohesion: Ansvar for høj samhørighed mellem klasserne
     \item Controller: Ansvar for input til systemet
 \end{itemize}
-\end{flushleft}
+
 
 
 %Designklassediagram
 \subsection{Designklassediagram (!Indsat kopi fra CDIO-2!)}
 \TODO[Må vi kopiere denne del fra CDIO-2? Ellers skal dette omskrives]
-\begin{flushleft}
+
 Et designklassediagram laves på baggrund af GRASP-principperne samt tidligere analytiske arbejde med særligt udgangspunkt i  vores domænemodel (Figur \ref{fig:domain}), som indeholder concepter af klasser. I designklassediagrammet arbejder vi med software-klasser, som skal implementeres i systemet. Her har software-klasserne mere konkrete beskrivelser end domænemodellen. Derfor er der bl.a. beskrevet attributter, tilhørende metoder og relationer mellem klasserne. Designklassediagrammet arbejdes dermed også videre på i implementationsfasen, da der vil opstå ændringer undervejs. Understående diagram er vores endelige dokumenterede designklassediagram for systemet:
-\end{flushleft}
+
 
 %Designklassediagram
 \begin{figure}[H]
@@ -48,7 +48,7 @@ Et designklassediagram laves på baggrund af GRASP-principperne samt tidligere a
 % GRASP-principper i designklassediagram
 \subsubsection{GRASP principper for designklassediagram}
 \TODO (Kan ændres i forhold til klassediagrammet)
-\begin{flushleft}
+
 \begin{itemize}
     \item Creator: 
     \begin{itemize}
@@ -80,14 +80,14 @@ Et designklassediagram laves på baggrund af GRASP-principperne samt tidligere a
         \item Klassen \textit{Game} vælges som facade controller, som står for inputs til systemet. Det skyldes at \textit{Game} ikke vurderes at have så stort ansvar, at den bliver incohesive
     \end{itemize}
 \end{itemize}
-\end{flushleft}
+
 
 
 % Sekvensdiagram
 \subsection{Sekvensdiagram }
-\begin{flushleft}
+
 \TODO Intro sekvensdiagram
-\end{flushleft}
+
 
 %Sekvensdiagram for ....?
 \subsubsection{Kast af terning}
@@ -110,5 +110,5 @@ Et designklassediagram laves på baggrund af GRASP-principperne samt tidligere a
 \subsection{Pakkediagram (Måske?) }
 \TODO{Afhænger måske af om det var rigtigt sidst, for så er det meget nemt at lave.}
 
-
+\end{flushleft}
 \end{document}

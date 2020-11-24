@@ -1,0 +1,22 @@
+\documentclass[../../main.tex]{subfiles}
+
+\begin{document}
+\begin{flushleft}
+\subsection{Deck}
+For at matador junior spillet kan indeholde 20 chancekort som er beskrevet i reglerne, vælges der at implementere en Deck klasse. Klassen initialisere de 20 kort, samt indeholder metoderne drawCard, shuffleDeck og returnCard.
+
+Kortene bliver initialiseret, ud fra en XML filen, samt klassen BoardLoader. I XML filen er alle kortene i spillet beskrevet, dvs. XML filen indeholder kortenes individuelle attributter. Som bliver læst af BoardLoader, og instantieret rigtigt.\newline
+
+Det fysiske monopoly jr. indeholder som tidligere nævnt 20 kort, hvor spilleren skal trække det øverste kort, hvis denne lander på et chance felt i spillet, hvorefter spilleren gør som beskrevet på kortet.
+
+Det blev besluttet at Deck klassen, repræsenterer de kort som i det fysiske spil vil ligge på bordet. Dvs. når en spiller trækker et kort, får spilleren et kort af Deck, og når spilleren lægger sit kort tilbage, modtager Deck et kort af spiller. Så derfor skal deck kunne holde styr på hvor mange kort der er i bunken, da spillere ifølge reglerne kan have kort på sig. \newline
+
+Der er fra gruppens side valgt at kortene skal ligge på hver sin plads i et array. Arrayet der indeholder kort vil fremover blive refereret til som cards.
+I al sin enkelhed var ideen at spilleren trækker kortet på den første plads i cards, og når spilleren er færdig med kortet bliver det lagt i bunden i cards.\newline
+
+For at have muligheden for at blande kortene i spillet bliver metoden shuffleDeck indført. Metoden shuffleDeck er en meget simpel funktion, som starter på første plads i cards, og bytter med et andet tilfældigt kort i cards. Og herefter tager næste plads i cards og bytter med et andet tilfældigt kort i cards, og så videre indtil den når til sidste plads i cards.
+
+Det viser sig her at det er belejligt at når spilleren trækker et kort bliver det "fjernet" fra cards. Da der så i ShuffleDeck metoden ikke behøver at blive taget højde for de kort som spillerne sidder med. 
+
+\end{flushleft}
+\end{document}
